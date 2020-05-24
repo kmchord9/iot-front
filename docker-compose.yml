@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  app:
+    container_name: app_apache
+    build: 
+      context: ./
+      dockerfile: ./compose/apache/Dockerfile
+    volumes: 
+      - ./src/vue/dist/:/usr/local/apache2/htdocs/
+    ports:
+      - "8000:80"
+  
+  web_front:
+    container_name: vue_web_front
+    build: ./compose/vue
+    volumes: 
+      - ./src/vue:/code
+    tty: true
+
+
