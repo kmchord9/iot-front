@@ -39,6 +39,9 @@ module.exports = {
       path.resolve(__dirname, 'src/api')
     ]
   },
+  performance: {
+
+  },
   plugins: [
     new VueLoaderPlugin(),
     new Dotenv()

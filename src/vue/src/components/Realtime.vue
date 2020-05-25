@@ -9,14 +9,14 @@
         <div class="columns">
             <div class="column">
                 <h3>Line Chart</h3>
-                <realtime-chart
+                <real
                   :device="'BME280'"
                   :place="'部屋001'"
                   :physic="'温度'"/>
             </div>
             <div class="column">
                 <h3>Line Chart</h3>
-                <realtime-chart
+                <real
                   :device="'BME280'"
                   :place="'部屋001'"
                   :physic="'湿度'"/>
@@ -25,6 +25,7 @@
         <div class="columns">
             <div class="column">
                 <h3>Line Chart</h3>
+                <real/>
             </div>
             <div class="column">
                 <h3>Line Chart</h3>
@@ -34,12 +35,12 @@
 </template>
 
 <script>
-import RealtimeChart from 'RealtimeChart'
+import Real from 'RealtimeChart'
 
 export default {
   name: 'Realtime',
   components: {
-    RealtimeChart
+    Real
   },
   data () {
     return {

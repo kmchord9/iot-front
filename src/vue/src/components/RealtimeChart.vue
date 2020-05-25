@@ -1,5 +1,6 @@
 <script>
 import { Line } from 'vue-chartjs'
+import 'chartjs-plugin-streaming'
 import moment from 'moment'
 import { chartLogData } from 'api'
 
@@ -66,8 +67,16 @@ export default {
             delay: 2000,
             refresh: 5000,
             duration: 300000,
+            // onRefresh: function(chart) {
+            //   chart.data.datasets.forEach(function(dataset) {
+            //     dataset.data.push({
+            //       x: Date.now(),
+            //       y: Math.random()
+            //     });
+            //   });
+            // }
             onRefresh: () => {
-              this.chartDataArray_realtime()
+               this.chartDataArray_realtime()
             }
           }
         }],
